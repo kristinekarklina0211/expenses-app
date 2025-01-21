@@ -336,7 +336,12 @@ p span {
   }
 
   .row {
+    flex-direction: column;
     gap: 18px;
+  }
+
+  .col {
+    width: 100%;
   }
 
   h1 {
@@ -376,13 +381,13 @@ p span {
     margin-bottom: 21px;
   }
 
-  .limit {
-    margin-bottom: 20px;
+  .history__list {
+    max-height: 100px;
+    overflow-y: auto;
   }
 
-  .limit__img {
-    width: 20px;
-    height: 20px;
+  .limit {
+    margin-bottom: 20px;
   }
 
   .pop-up__content {
