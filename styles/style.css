@@ -386,6 +386,11 @@ p span {
     top: 30%;
   }
 
+  .history {
+    position: absolute;
+    top: 590px;
+  }
+
   .history__title {
     margin-bottom: 21px;
   }
