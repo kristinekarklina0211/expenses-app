@@ -165,8 +165,18 @@ option {
 }
 
 ol {
-  list-style: decimal;
   margin-left: 20px;
+  padding-left: 20px;
+}
+
+ol li {
+  counter-increment: item;
+}
+
+ol li::before {
+  content: counter(item) ". ";
+  display: inline-block;
+  width: 30px;
 }
 
 /* Limit change */
@@ -323,7 +333,6 @@ p span {
 
 @media (max-width: 767px) {
   body {
-    font-size: 16px;
     line-height: 1.4;
   }
 
@@ -366,11 +375,11 @@ p span {
   .input__currency,
   .category-wrapper::after {
     right: 15px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .input__currency {
-    top: 25%;
+    top: 22%;
   }
 
   .category-wrapper::after {
@@ -382,6 +391,7 @@ p span {
   }
 
   .history__list {
+    margin-left: 15px;
     max-height: 100px;
     overflow-y: auto;
   }
@@ -390,6 +400,16 @@ p span {
     margin-bottom: 20px;
   }
 
+  .pop-up__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .pop-up__col {
+    width: 100%;
+  }
+  
   .pop-up__content {
     gap: 80px;
     height: 300px;
@@ -401,6 +421,7 @@ p span {
   }
 
   .pop-up__close-btn {
+    top: -25px;
     width: 25px;
     height: 25px;
   }
