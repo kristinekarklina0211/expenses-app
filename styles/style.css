@@ -396,6 +396,10 @@ p span {
     overflow-y: auto;
   }
 
+  .sum {
+    margin-bottom: 13px;
+  }
+
   .pop-up__row {
     display: flex;
     flex-direction: column;
