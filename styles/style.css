@@ -341,7 +341,7 @@ p span {
   }
 
   .rows-container {
-    gap: 40px;
+    gap: 30px;
   }
 
   .row {
@@ -358,7 +358,7 @@ p span {
   }
 
   .title {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   h2 {
@@ -394,10 +394,6 @@ p span {
     margin-left: 15px;
     max-height: 100px;
     overflow-y: auto;
-  }
-
-  .limit {
-    margin-bottom: 20px;
   }
 
   .pop-up__row {
