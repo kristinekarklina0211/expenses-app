@@ -386,17 +386,14 @@ p span {
     top: 30%;
   }
 
-  .history {
-    position: absolute;
-    top: 590px;
-  }
-
   .history__title {
     margin-bottom: 21px;
   }
 
   .history__list {
     margin-left: 15px;
+    max-height: 100px;
+    overflow-y: auto;
   }
 
   .sum {
