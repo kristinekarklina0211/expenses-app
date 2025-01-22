@@ -397,8 +397,6 @@ p span {
 
   .history__list {
     margin-left: 15px;
-    max-height: 100px;
-    overflow-y: auto;
   }
 
   .sum {
