@@ -18,21 +18,24 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
+
     <div class="container">
-      <h1 class="title">Учёт расходов</h1>
 
-      <div class="rows-container">
+      <h1 class="label title">Учёт расходов</h1>
 
-        <div class="row">
+      <div class="expenses">
 
-          <div class="col">
-            <div class="input-wrapper">
-              <input class="js-input input" type="number" />
-              <span class="input__currency">EUR</span>
+        <div class="expenses__box">
+
+          <div class="input-wrapper">
+
+            <div class="input__input">
+              <input class="js-input input" type="number"/>
+              <span class="js-input__currency input__currency"></span>
             </div>
 
-            <div class="category-wrapper">
-              <select class="js-category category">
+            <div class="input__category">
+              <select class="js-category input__category-list">
                 <option value="1">Жильё</option>
                 <option value="2">Еда</option>
                 <option value="3">Транспорт</option>
@@ -41,85 +44,88 @@
                 <option value="6">Развлечения</option>
                 <option value="7">Другие расходы</option>
               </select>
-            </div>
           </div>
 
-          <div class="col">
-            <button class="js-add-btn btn add-btn">Добавить</button>
           </div>
-
         </div>
 
-        <div class="row">
-
-          <div class="col">
-              <p class="limit">Лимит:
-                <span class="js-limit"></span>
-                <span>
-                  <button class="js-pop-up__open-btn pop-up__open-btn">
-                    <img class="limit__img"
-                      src="./resources/change_limit.png"
-                      alt="Изменить лимит"
-                    >
-                  </button>
-                </span>
-
-                <div class="js-pop-up pop-up">
-                  <div class="js-pop-up__content pop-up__content">
-
-                    <div class="pop-up__row">
-
-                      <div class="pop-up__col">
-                        <p class="pop-up__title">Новый лимит</p>
-                      </div>
-
-                      <div class="pop-up__col">
-                        <img class="js-pop-up__close-btn pop-up__close-btn" src="./resources/close_icon.svg" alt="Закрыть поп-ап">
-                      </div>
-
-                    </div>
-
-                    <div class="pop-up__row">
-                      <div class="pop-up__col">
-                        <div class="input-wrapper">
-                          <input class="js-pop-up__input input" type="number">
-                          <span class="input__currency">EUR</span>
-                        </div>
-                      </div>
-                      <div class="pop-up__col">
-                        <button class="js-pop-up__set-btn btn pop-up__set-btn">Задать лимит</button>
-                      </div>
-                    </div>
-                  
-                  </div>
-                </div>
-                
-              </p>
-            <p class="sum">Всего: <span class="js-sum"></span></p>
-            <p class="status">
-              Статус: <span class="js-status status_green"></span>
-            </p>
-          </div>
-
-          <div class="col">
-            <div class="history">
-              <h2 class="history__title">История:</h2>
-              <div class="js-history__list history__list"></div>
-            </div>
-          </div>
-
+        <div class="expenses__box">
+          <button class="js-add-btn btn add-btn">Добавить</button>
         </div>
 
-        <div class="row">
-
-          <div class="col">
-            <button class="js-reset-btn btn reset-btn">Сбросить расходы</button>
-          </div>
+        <div class="expenses__box">
+          <div class="stats">
+            <div class="stats__limit">
+              <span class="label">Лимит:</span>
+              <span class="js-limit"></span>
+              <span>
+                <button class="js-pop-up__open-btn pop-up__open-btn">
+                  <img class="stats__limit-img"
+                    src="./resources/change_limit.png"
+                    alt="Изменить лимит"
+                  >
+                </button>
+              </span>
+            </div>
+            <div class="stats__sum">
+              <span class="label">Всего:</span>
+              <span class="js-sum"></span>
+            </div>
           
-          <div class="col"></div>
+            <div class="stats__status">
+              <span class="label">Статус:</span>
+              <span class="js-status status_green"></span>
+            </div>
+          </div>
+        </div>
 
+        <div class="expenses__box">
+          <div class="history">
+            <h2 class="label history__title">История:</h2>
+            <div class="js-history__list history__list"></div>
+          </div>
+        </div>
+
+        <div class="expenses__box">
+          <button class="js-reset-btn btn reset-btn">Сбросить расходы</button>
+        </div>
+
+      </div>
+
+      <!-- Pop-up -->
+
+      <div class="js-pop-up pop-up">
+
+        <div class="js-pop-up__content pop-up__content">
+
+          <div class="pop-up__content__box">
+            <p class="label pop-up__title">Новый лимит</p>
+          </div>
+
+          <div class="pop-up__content__box">
+            <div class="pop-up__close-btn-wrapper">
+              <img class="js-pop-up__close-btn pop-up__close-btn"
+                src="./resources/close_icon.svg"
+                alt="Закрыть поп-ап"
+              >
+            </div>
+          </div>
+
+          <div class="pop-up__content__box">
+            <div class="input__input">
+              <input class="js-pop-up__input input" type="number"/>
+              <span class="js-input__currency input__currency"></span>
+            </div>
+          </div>
+
+          <div class="pop-up__content__box">
+            <button class="js-pop-up__set-btn btn pop-up__set-btn">Задать лимит</button>
+          </div>
+        
         </div>
       </div>
+
+    </div>
 
     <script src="script.js"></script>
     <script src="pop-up.js"></script>

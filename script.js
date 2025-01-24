@@ -7,6 +7,7 @@ const STATUS_OUT_OF_LIMIT = "всё плохо";
 const STATUS_OUT_OF_LIMIT_CLASSNAME = "status_red";
 
 const inputNode = document.querySelector(".js-input");
+const currencyNodes = document.querySelectorAll(".js-input__currency");
 const categoryNode = document.querySelector(".js-category");
 const addBtnNode = document.querySelector(".js-add-btn");
 const historyNode = document.querySelector(".js-history__list");
@@ -47,6 +48,9 @@ resetBtnNode.addEventListener("click", function() {
 
 // Задаём первичные значения
 function init(expenses) {
+    currencyNodes.forEach(currencyNode => {
+        currencyNode.innerText = CURRENCY;
+    });
     limitNode.innerText = `${limit} ${CURRENCY}`;
     sumNode.innerText = `${calculateExpenses(expenses)} ${CURRENCY}`;
     statusNode.innerText = STATUS_WITHIN_LIMIT;
